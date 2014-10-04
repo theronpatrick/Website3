@@ -1199,9 +1199,22 @@ body, html {
 
 .app-window {
   display: inline-block;
+  vertical-align: top;
   width: 46%;
-  height: 90%;
+  height: 86%;
   background-color: #343b3e;
   color: white;
   margin: 2%;
+}
+
+nav {
+  height: 100%;
+}
+
+.nav-block {
+  height: 20%;
+  background-color: red;
+}
+.nav-block .middle-align {
+  vertical-align: middle;
 }
