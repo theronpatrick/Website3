@@ -1185,6 +1185,31 @@ body, html {
   width: 100%;
 }
 
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  color: white;
+}
+
+/* unvisited link */
+a:visited {
+  color: white;
+}
+
+/* visited link */
+a:hover {
+  color: white;
+}
+
+/* mouse over link */
+a:active {
+  color: white;
+}
+
 .unselectable {
   user-select: none;
 }
@@ -1216,6 +1241,8 @@ nav {
   background-color: red;
   border-bottom: 1px solid #343b3e;
   border-top: 1px solid #343b3e;
+  font-size: 3em;
+  font-family: "quicksand-light";
 }
 .nav-block.first {
   border-top: none;
@@ -1223,8 +1250,28 @@ nav {
 .nav-block.last {
   border-bottom: none;
 }
+.nav-block.blue-1 {
+  background-color: #00b3ff;
+}
+.nav-block.blue-2 {
+  background-color: #00a1e5;
+}
+.nav-block.blue-3 {
+  background-color: #007db2;
+}
+.nav-block.blue-4 {
+  background-color: #005a7f;
+}
+.nav-block.blue-5 {
+  background-color: #002d40;
+}
 .nav-block table {
   height: 100%;
   width: 100%;
   text-align: center;
+}
+
+.content-container {
+  height: 100%;
+  border-bottom: 7px solid red;
 }

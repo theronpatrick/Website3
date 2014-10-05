@@ -1,7 +1,15 @@
 // Color variables
-$blue: #007DB2;
+// Blue colors for tabs going down
+$blue1: #00B3FF;
+$blue2: #00A1E5;
+$blue3: #007DB2; // <-- Original
+$blue4: #005A7F;
+$blue5: #002D40;
+
 $grayPrimary: #001219; 
 $graySecondary: #343b3e;
+
+$textColor: #FFFFFF;
 
 
 // Main styles
@@ -10,6 +18,17 @@ body, html {
   height: 100%;
   width: 100%;
 } 
+
+html {
+	-webkit-box-sizing: border-box; // Safari <= 5
+     -moz-box-sizing: border-box; // Firefox <= 19
+          box-sizing: border-box;
+}
+
+a {color:$textColor;}      /* unvisited link */
+a:visited {color:$textColor;}  /* visited link */
+a:hover {color:$textColor;}  /* mouse over link */
+a:active {color:$textColor;} 
 
 // Prevent selection of most things
 .unselectable {
@@ -36,7 +55,7 @@ body, html {
 	width: 46%;
 	height: 86%;
 	background-color: $graySecondary;
-	color: white;
+	color: $textColor;
 
 	margin: 2%;
 
@@ -54,12 +73,31 @@ nav {
 	border-bottom: 1px solid $graySecondary;
 	border-top: 1px solid $graySecondary;
 
+	font-size: 3em;
+	font-family: "quicksand-light";
+
 	&.first {
 		border-top: none;
 	}
 
 	&.last {
 		border-bottom: none;
+	}
+
+	&.blue-1 {
+		background-color: $blue1;
+	}
+	&.blue-2 {
+		background-color: $blue2;
+	}
+	&.blue-3 {
+		background-color: $blue3;
+	}
+	&.blue-4 {
+		background-color: $blue4;
+	}
+	&.blue-5 {
+		background-color: $blue5;
 	}
 
 	// Table used to vertical align and center
@@ -69,4 +107,11 @@ nav {
 		text-align: center;
 	}
 	
+}
+
+.content-container {
+	height: 100%;
+	
+	// This needed to set height to be same as left panel
+	border-bottom: 7px solid red;
 }
