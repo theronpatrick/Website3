@@ -1214,7 +1214,17 @@ nav {
 .nav-block {
   height: 20%;
   background-color: red;
+  border-bottom: 1px solid #343b3e;
+  border-top: 1px solid #343b3e;
 }
-.nav-block .middle-align {
-  vertical-align: middle;
+.nav-block.first {
+  border-top: none;
+}
+.nav-block.last {
+  border-bottom: none;
+}
+.nav-block table {
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }

@@ -51,8 +51,22 @@ nav {
 	height: 20%;
 	background-color: red; 
 
-	.middle-align {
-		vertical-align: middle;
+	border-bottom: 1px solid $graySecondary;
+	border-top: 1px solid $graySecondary;
+
+	&.first {
+		border-top: none;
+	}
+
+	&.last {
+		border-bottom: none;
+	}
+
+	// Table used to vertical align and center
+	table { 
+		height: 100%;
+		width: 100%;
+		text-align: center;
 	}
 	
 }
