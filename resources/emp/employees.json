@@ -1,0 +1,5 @@
+[
+{ "firstName":"John" , "lastName":"Doe" , "email":"johndoe@gmail.com" , "phoneNumber": "5085551234" , "address":"123 Main St"}, 
+{ "firstName":"Anna" , "lastName":"Smith" , "email":"annasmith@gmail.com" , "phoneNumber": "5085553214" , "address":"456 Sullivan St"}, 
+{ "firstName":"Peter" , "lastName":"Jones" , "email":"peterjones@gmail.com" , "phoneNumber": "5085559876" , "address":"789 West St"}
+]

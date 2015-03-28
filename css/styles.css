@@ -1241,6 +1241,28 @@ a:active {
   /* Firefox 1 - 28 */
   box-sizing: border-box;
 }
+.app-window.left .normal-text {
+  display: table-row;
+}
+.app-window.left .shrunk-text {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .app-window.left {
+    width: 12%;
+  }
+  .app-window.left .normal-text {
+    display: none;
+  }
+  .app-window.left .shrunk-text {
+    display: table-row;
+  }
+}
+@media screen and (max-width: 800px) {
+  .app-window.right {
+    width: 80%;
+  }
+}
 
 nav {
   height: 100%;
@@ -1291,10 +1313,32 @@ nav {
 
 .content-container {
   height: 100%;
-  padding: 30px;
-  font-size: 30px;
+  padding: 1em;
+  font-size: 1.5em;
   font-family: "quicksand-regular";
 }
-.content-container .with-top-margin {
-  margin-top: 12px;
+@media screen and (max-width: 1400px) {
+  .content-container {
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 540px) {
+  .content-container {
+    font-size: 0.9em;
+  }
+}
+.content-container div {
+  margin-top: 16px;
+}
+.content-container div:first-child {
+  margin-top: 0;
+}
+.content-container li {
+  margin-top: 16px;
+}
+.content-container li:first-child {
+  margin-top: 0;
+}
+.content-container ul {
+  margin: 0;
 }

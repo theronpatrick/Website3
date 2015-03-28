@@ -29,8 +29,8 @@ body, html {
 
 html {
 	-webkit-box-sizing: border-box; // Safari <= 5
-     -moz-box-sizing: border-box; // Firefox <= 19
-          box-sizing: border-box;
+	 -moz-box-sizing: border-box; // Firefox <= 19
+		  box-sizing: border-box;
 }
 
 // Remove outline on anchor tags
@@ -75,6 +75,31 @@ a:active {color:$textColor;}
 	margin: 2%;
 
 	@include border-box;
+
+	&.left {
+		.normal-text {
+			display: table-row;
+		}
+		.shrunk-text {
+			display: none;
+		}
+		@media screen and (max-width: 800px) {
+			width: 12%;
+
+			.normal-text {
+				display: none;
+			}
+			.shrunk-text {
+				display: table-row;
+			}
+		}
+	}
+
+	&.right {
+		@media screen and (max-width: 800px) {
+			width: 80%;
+		}
+	}
 
 
 }
@@ -135,13 +160,35 @@ nav {
 .content-container {
 	height: 100%;
 
-	padding: 30px;
+	padding: 1em;
 
-	font-size: 30px;
+	font-size: 1.5em;
 	font-family: "quicksand-regular";
 
-	.with-top-margin {
-		margin-top: 12px;
+	@media screen and (max-width: 1400px) {
+		font-size: 1.1em
+	}
+
+	@media screen and (max-width: 540px) {
+		font-size: 0.9em
+	}
+
+	div {
+		margin-top: 16px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	li {
+		margin-top: 16px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	ul {
+		margin: 0;
 	}
 	
 }
