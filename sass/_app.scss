@@ -6,6 +6,8 @@ $blue3: #007DB2; // <-- Original
 $blue4: #005A7F;
 $blue5: #002D40;
 
+$orange: #E8900C;
+
 $grayPrimary: #001219; 
 $graySecondary: #343b3e;
 
@@ -30,6 +32,13 @@ html {
      -moz-box-sizing: border-box; // Firefox <= 19
           box-sizing: border-box;
 }
+
+// Remove outline on anchor tags
+a {
+   outline: none !important;
+   border: 0 !important;
+}
+
 
 a {color:$textColor;}      /* unvisited link */
 a:visited {color:$textColor;}  /* visited link */
@@ -110,6 +119,10 @@ nav {
 		background-color: $blue5;
 	}
 
+	&.active {
+		background-color: $orange;
+	}
+
 	// Table used to vertical align and center
 	table { 
 		height: 100%;
@@ -121,5 +134,14 @@ nav {
 
 .content-container {
 	height: 100%;
+
+	padding: 30px;
+
+	font-size: 30px;
+	font-family: "quicksand-regular";
+
+	.with-top-margin {
+		margin-top: 12px;
+	}
 	
 }

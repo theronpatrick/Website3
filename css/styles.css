@@ -1192,6 +1192,11 @@ html {
 }
 
 a {
+  outline: none !important;
+  border: 0 !important;
+}
+
+a {
   color: white;
 }
 
@@ -1275,6 +1280,9 @@ nav {
 .nav-block.blue-5 {
   background-color: #002d40;
 }
+.nav-block.active {
+  background-color: #e8900c;
+}
 .nav-block table {
   height: 100%;
   width: 100%;
@@ -1283,4 +1291,10 @@ nav {
 
 .content-container {
   height: 100%;
+  padding: 30px;
+  font-size: 30px;
+  font-family: "quicksand-regular";
+}
+.content-container .with-top-margin {
+  margin-top: 12px;
 }
