@@ -30,13 +30,23 @@ $(document).ready(function() {
 		// Find corresponding tile to highlight
 		setTileActive();
 
+		$(".content-container").addClass("begin-transition");
+
 
 		$.ajax({
 			url: url
 		})
 		.then(function(response) {
 			$(".content-container").empty();
+
 			$(".content-container").html(response);
+
+			setTimeout(function() {
+				$(".content-container").removeClass("begin-transition");
+			});
+			
+
+
 		})
 
 	}

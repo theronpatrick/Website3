@@ -1280,6 +1280,9 @@ nav {
   -moz-box-sizing: border-box;
   /* Firefox 1 - 28 */
   box-sizing: border-box;
+  -webkit-transition: 0.2s;
+  /* Safari */
+  transition: 0.2s;
 }
 .nav-block.first {
   border-top: none;
@@ -1305,6 +1308,9 @@ nav {
 .nav-block.active {
   background-color: #e8900c;
 }
+.nav-block.active a {
+  color: #000000;
+}
 .nav-block table {
   height: 100%;
   width: 100%;
@@ -1312,10 +1318,21 @@ nav {
 }
 
 .content-container {
-  height: 100%;
   padding: 1em;
   font-size: 1.5em;
   font-family: "quicksand-regular";
+  opacity: 1;
+  -webkit-transition: 0.8s;
+  /* Safari */
+  transition: 0.8s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.content-container.begin-transition {
+  opacity: 0;
+  -webkit-transition: 0s;
+  /* Safari */
+  transition: 0s;
 }
 @media screen and (max-width: 1400px) {
   .content-container {

@@ -19,6 +19,11 @@ $textColor: #FFFFFF;
   box-sizing: border-box;
 }
 
+@mixin transition($time) {
+	-webkit-transition: $time; /* Safari */
+    transition: $time;
+}
+
 
 // Main styles
 
@@ -120,6 +125,8 @@ nav {
 
 	@include border-box;
 
+	@include transition(0.2s);
+
 	&.first {
 		border-top: none;
 	}
@@ -146,6 +153,10 @@ nav {
 
 	&.active {
 		background-color: $orange;
+
+		a {
+			color: #000000;
+		}
 	}
 
 	// Table used to vertical align and center
@@ -158,12 +169,27 @@ nav {
 }
 
 .content-container {
-	height: 100%;
-
 	padding: 1em;
 
 	font-size: 1.5em;
 	font-family: "quicksand-regular";
+
+	opacity: 1;
+
+	@include transition(0.8s);
+
+    // Force hardware accel.
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0,0,0);
+
+
+	// This class is added then immediately taken away when content is rendered, causing normal transition
+	&.begin-transition {
+		opacity: 0;
+
+		@include transition(0.0s);
+
+	}
 
 	@media screen and (max-width: 1400px) {
 		font-size: 1.1em
