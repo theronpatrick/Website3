@@ -1194,6 +1194,7 @@ html {
 a {
   outline: none !important;
   border: 0 !important;
+  text-decoration: none;
 }
 
 a {
@@ -1258,10 +1259,16 @@ a:active {
     display: table-row;
   }
 }
+.app-window.right {
+  overflow-y: auto;
+}
 @media screen and (max-width: 800px) {
   .app-window.right {
     width: 80%;
   }
+}
+.app-window.right a {
+  text-decoration: underline;
 }
 
 nav {
@@ -1283,6 +1290,16 @@ nav {
   -webkit-transition: 0.2s;
   /* Safari */
   transition: 0.2s;
+}
+@media screen and (max-height: 500px) {
+  .nav-block {
+    font-size: 2.0em;
+  }
+}
+@media screen and (max-height: 350px) {
+  .nav-block {
+    font-size: 1.0em;
+  }
 }
 .nav-block.first {
   border-top: none;
