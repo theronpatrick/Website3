@@ -21,8 +21,7 @@
   "homepage": "https://github.com/theronpatrick/Website3#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-connect": "^5.0.0",
-    "gulp-watch": "^4.3.9",
+    "gulp-sass": "^2.3.2",
     "gulp-webserver": "^0.9.1"
   }
 }

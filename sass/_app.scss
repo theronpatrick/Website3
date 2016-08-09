@@ -48,7 +48,10 @@ a {
 
 a {color:$textColor;}      /* unvisited link */
 a:visited {color:$textColor;}  /* visited link */
-a:hover {color:$textColor;}  /* mouse over link */
+a:hover, a:focus {
+	color:$textColor;
+	text-shadow: 0px 0px 3px #FFFFFF;
+}  
 a:active {color:$textColor;} 
 
 // Prevent selection of most things
@@ -121,7 +124,6 @@ nav {
 
 .nav-block {
 	height: 20%;
-	background-color: red; 
 
 	border-bottom: 1px solid $graySecondary;
 	border-top: 1px solid $graySecondary;
@@ -165,11 +167,22 @@ nav {
 		background-color: $blue5;
 	}
 
+	// Apply subtle highlight to nav text
+	a {
+		&:focus {
+			text-shadow: 0 0 6px #FFFFFF;
+		}
+	}
+
+
 	&.active {
 		background-color: $orange;
 
 		a {
 			color: #000000;
+			&:focus {
+				text-shadow: none;
+			}
 		}
 	}
 
