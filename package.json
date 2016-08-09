@@ -1,0 +1,28 @@
+{
+  "name": "website3",
+  "version": "1.0.0",
+  "description": "source for theronp.com",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theronpatrick/Website3.git"
+  },
+  "author": "theron patrick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theronpatrick/Website3/issues"
+  },
+  "homepage": "https://github.com/theronpatrick/Website3#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-watch": "^4.3.9",
+    "gulp-webserver": "^0.9.1"
+  }
+}
