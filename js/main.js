@@ -62,8 +62,6 @@ $(document).ready(function() {
 		var href = $(selector);
 		var parent = href.parent();
 
-		console.log("href is " , parent);
-
 		// Remove class from others, add to selected one
 		$(".nav-block").removeClass("active");
 
